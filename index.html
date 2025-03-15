@@ -12,6 +12,11 @@
       .inter {
         font-family: "Inter", sans-serif;
       }
+
+      .active {
+        background-color: #ff1f3d;
+        color: white;
+      }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>PH Tube</title>
@@ -43,18 +48,29 @@
         class="py-10 flex flex-row justify-center items-center gap-8"
       >
         <button
-          class="bg-[#FF1F3D] text-white text-base font-medium px-5 py-2 rounded-md cursor-pointer"
+          class="bg-[#25252526] hover:bg-[#FF1F3D] text-[#252525B2] hover:text-white text-base font-medium px-5 py-2 rounded-md cursor-pointer"
           id="category-1000"
-          onclick="loadVideos()"
+          onclick="handleClick()"
         >
           All
         </button>
       </nav>
     </header>
 
-    <div id="video" class="video mt-8 grid grid-cols-4 gap-16 mb-20"></div>
+    <div id="video" class="video mt-8 grid grid-cols-4 gap-16 mb-20">
+      <div
+        class="col-span-full flex flex-col gap-3 justify-center items-center"
+      >
+        <img src="Icon.png" alt="" class="w-36 h-36" />
+        <h1 class="text-3xl font-bold text-center">
+          Oops!! Sorry, There is no <br />
+          content here
+        </h1>
+      </div>
+    </div>
 
     <script src="script/categories.js"></script>
     <script src="script/videos.js"></script>
+    <script src="script/loadCategoryVideos.js"></script>
   </body>
 </html>
