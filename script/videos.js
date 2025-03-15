@@ -1,4 +1,5 @@
 function loadVideos(searchText = "") {
+  showLoader();
   fetch(
     `https://openapi.programming-hero.com/api/phero-tube/videos?title=${searchText}`
   )
@@ -68,6 +69,7 @@ function displayVideos(videos) {
 
     video.appendChild(differentVideos);
   }
+  hideLoader();
 }
 
 //loadVideos();
